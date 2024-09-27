@@ -1,0 +1,33 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Yuhang Pei
+theme: ["PaperMod"]
+
+params:
+  defaultTheme: auto
+  disableThemeToggle: false
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
+
+  socialIcons: # optional
+    - name: "<platform>"
+      url: "<link>"
+    - name: "<platform 2>"
+      url: "<link2>"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: [ "title", "permalink", "summary", "content" ]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
